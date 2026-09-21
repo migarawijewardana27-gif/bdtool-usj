@@ -7,6 +7,7 @@ import {
   ExternalLink,
   Sparkles,
   ArrowUpRight,
+  ClipboardList,
 } from "lucide-react";
 
 // ── Dynamic Metadata ────────────────────────────────────────────────────────
@@ -58,7 +59,7 @@ function DefaultPartnerPage({
   eventSlug: string;
 }) {
   return (
-    <div className="min-h-screen flex flex-col" data-event={eventSlug}>
+    <div className="min-h-screen flex flex-col bg-surface-0 text-text-primary" data-event={eventSlug}>
       {/* ── Background Effects ─────────────────────────────────────────── */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {/* Top-right blue glow */}
@@ -193,17 +194,30 @@ function DefaultPartnerPage({
                 </div>
               </div>
 
-              {/* CTA Button */}
-              <a
-                href={partner.driveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 rounded-xl btn-primary px-8 py-4 text-base"
-              >
-                <ExternalLink className="w-5 h-5" />
-                Access The Vault
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 items-center">
+                <a
+                  href={partner.driveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex-1 w-full sm:w-auto inline-flex justify-center items-center gap-3 rounded-xl btn-primary px-8 py-4 text-base"
+                >
+                  <ExternalLink className="w-5 h-5" />
+                  Access The Vault
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+                
+                <a
+                  href="https://click.aiesec.lk/nationalpartnersurvey"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex-1 w-full sm:w-auto inline-flex justify-center items-center gap-3 rounded-xl border border-border-light bg-surface-100/50 hover:bg-surface-200 px-8 py-4 text-base font-semibold transition-colors"
+                >
+                  <ClipboardList className="w-5 h-5 text-aiesec-blue" />
+                  National Product Survey
+                  <ArrowUpRight className="w-4 h-4 text-text-tertiary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -325,16 +339,29 @@ function NatConPartnerPage({ partner }: { partner: any }) {
                     Everything you need for the National Conference 2026. Creative materials, performance reports, and official branding collateral.
                   </p>
 
-                  <a
-                    href={partner.driveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-3 rounded-none border-2 border-[#F7B818] bg-[#F7B818] px-8 py-4 text-[#05332C] font-bold text-lg transition-all hover:bg-transparent hover:text-[#F7B818]"
-                  >
-                    <FolderOpen className="w-5 h-5" />
-                    Access Deliverables
-                    <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </a>
+                  <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                    <a
+                      href={partner.driveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex justify-center items-center gap-3 rounded-none border-2 border-[#F7B818] bg-[#F7B818] px-8 py-4 text-[#05332C] font-bold text-lg transition-all hover:bg-transparent hover:text-[#F7B818]"
+                    >
+                      <FolderOpen className="w-5 h-5" />
+                      Access Deliverables
+                      <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </a>
+                    
+                    <a
+                      href="https://click.aiesec.lk/nationalpartnersurvey"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex justify-center items-center gap-3 rounded-none border-2 border-[#F5F1E6]/30 bg-transparent px-8 py-4 text-[#F5F1E6] font-bold text-lg transition-all hover:border-[#F7B818] hover:text-[#F7B818]"
+                    >
+                      <ClipboardList className="w-5 h-5" />
+                      National Product Survey
+                      <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </a>
+                  </div>
                 </div>
 
                 {/* Right Side: Visual Ornament */}

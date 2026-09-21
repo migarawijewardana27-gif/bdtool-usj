@@ -4,6 +4,8 @@ import {
   setDoc,
   getDoc,
   getDocs,
+  query,
+  where,
 } from "firebase/firestore";
 import { db, FIREBASE_PROJECT_ID } from "./firebase";
 
@@ -34,24 +36,19 @@ const ACCESS_CODES: Record<
   { ocName: string; eventName: string; eventSlug: string }
 > = {
   "2627": {
-    ocName: "LC USJ",
+    ocName: "EB",
     eventName: "AIESEC in USJ",
     eventSlug: "aiesec-in-usj",
   },
   "0000": {
-    ocName: "NatCon 2026",
-    eventName: "NatCon 2026",
-    eventSlug: "natcon-2026",
+    ocName: "Winter Induction",
+    eventName: "Winter Induction",
+    eventSlug: "winter-induction",
   },
   "1111": {
-    ocName: "NLDS 2026",
-    eventName: "NLDS 2026",
-    eventSlug: "nlds-2026",
-  },
-  "2222": {
-    ocName: "Worlds Largest Lesson 2026",
-    eventName: "Worlds Largest Lesson 2026",
-    eventSlug: "worlds-largest-lesson-2026",
+    ocName: "Project Nova",
+    eventName: "Project Nova",
+    eventSlug: "project-nova",
   },
 };
 
@@ -168,6 +165,17 @@ export async function getPartnerBySlugClient(
 
 export async function getAllPartnersClient(): Promise<Partner[]> {
   const snapshot = await getDocs(collection(db, PARTNERS_COLLECTION));
+  return snapshot.docs.map((d) => d.data() as Partner);
+}
+
+export async function getPartnersByEventSlugClient(
+  eventSlug: string
+): Promise<Partner[]> {
+  const q = query(
+    collection(db, PARTNERS_COLLECTION),
+    where("eventSlug", "==", eventSlug)
+  );
+  const snapshot = await getDocs(q);
   return snapshot.docs.map((d) => d.data() as Partner);
 }
 

@@ -3,27 +3,27 @@
 /* ─── Theme Tokens ─────────────────────────────────────────────────────────── */
 
 @theme inline {
-  --color-aiesec-blue: #037EF3;
-  --color-aiesec-blue-dark: #0260B8;
-  --color-aiesec-blue-glow: rgba(3, 126, 243, 0.25);
-  --color-aiesec-blue-subtle: rgba(3, 126, 243, 0.08);
+  --color-aiesec-blue: var(--theme-primary, #037EF3);
+  --color-aiesec-blue-dark: var(--theme-primary-dark, #0260B8);
+  --color-aiesec-blue-glow: var(--theme-primary-glow, rgba(3, 126, 243, 0.25));
+  --color-aiesec-blue-subtle: var(--theme-primary-subtle, rgba(3, 126, 243, 0.08));
 
-  --color-surface-0: #000000;
-  --color-surface-50: #050505;
-  --color-surface-100: #0a0a0a;
-  --color-surface-200: #111111;
-  --color-surface-300: #1a1a1a;
-  --color-surface-400: #222222;
-  --color-surface-500: #2a2a2a;
-  --color-surface-600: #333333;
+  --color-surface-0: var(--theme-surface-0, #000000);
+  --color-surface-50: var(--theme-surface-50, #050505);
+  --color-surface-100: var(--theme-surface-100, #0a0a0a);
+  --color-surface-200: var(--theme-surface-200, #111111);
+  --color-surface-300: var(--theme-surface-300, #1a1a1a);
+  --color-surface-400: var(--theme-surface-400, #222222);
+  --color-surface-500: var(--theme-surface-500, #2a2a2a);
+  --color-surface-600: var(--theme-surface-600, #333333);
 
-  --color-text-primary: #f5f5f5;
-  --color-text-secondary: #a1a1a1;
-  --color-text-tertiary: #666666;
+  --color-text-primary: var(--theme-text-primary, #f5f5f5);
+  --color-text-secondary: var(--theme-text-secondary, #a1a1a1);
+  --color-text-tertiary: var(--theme-text-tertiary, #666666);
 
-  --color-border-subtle: rgba(255, 255, 255, 0.06);
-  --color-border-light: rgba(255, 255, 255, 0.1);
-  --color-border-accent: rgba(3, 126, 243, 0.3);
+  --color-border-subtle: var(--theme-border-subtle, rgba(255, 255, 255, 0.06));
+  --color-border-light: var(--theme-border-light, rgba(255, 255, 255, 0.1));
+  --color-border-accent: var(--theme-border-accent, rgba(3, 126, 243, 0.3));
 
   --color-success: #22c55e;
   --color-error: #ef4444;
@@ -36,31 +36,57 @@
 
 [data-event="natcon-2026"] {
   /* Vibrant Gold replaces AIESEC Blue */
-  --color-aiesec-blue: #F7B818;
-  --color-aiesec-blue-dark: #D49A0D;
-  --color-aiesec-blue-glow: rgba(247, 184, 24, 0.25);
-  --color-aiesec-blue-subtle: rgba(247, 184, 24, 0.08);
+  --theme-primary: #F7B818;
+  --theme-primary-dark: #D49A0D;
+  --theme-primary-glow: rgba(247, 184, 24, 0.25);
+  --theme-primary-subtle: rgba(247, 184, 24, 0.08);
 
   /* Deep Emerald replaces Dark backgrounds */
-  --color-surface-0: #05332C;
-  --color-surface-50: #074037;
-  --color-surface-100: #0A4A40;
-  --color-surface-200: #0C594D;
-  --color-surface-300: #0F6B5C;
-  --color-surface-400: #127A69;
+  --theme-surface-0: #05332C;
+  --theme-surface-50: #074037;
+  --theme-surface-100: #0A4A40;
+  --theme-surface-200: #0C594D;
+  --theme-surface-300: #0F6B5C;
+  --theme-surface-400: #127A69;
 
   /* Cream/Warm text replaces stark white */
-  --color-text-primary: #F5F1E6;
-  --color-text-secondary: rgba(245, 241, 230, 0.85);
-  --color-text-tertiary: rgba(245, 241, 230, 0.6);
+  --theme-text-primary: #F5F1E6;
+  --theme-text-secondary: rgba(245, 241, 230, 0.85);
+  --theme-text-tertiary: rgba(245, 241, 230, 0.6);
 
   /* Gold borders */
-  --color-border-subtle: rgba(247, 184, 24, 0.15);
-  --color-border-light: rgba(247, 184, 24, 0.25);
-  --color-border-accent: rgba(247, 184, 24, 0.4);
+  --theme-border-subtle: rgba(247, 184, 24, 0.15);
+  --theme-border-light: rgba(247, 184, 24, 0.25);
+  --theme-border-accent: rgba(247, 184, 24, 0.4);
 
   /* Use serif font for headings in this theme */
   --font-heading: var(--font-playfair), Georgia, serif;
+}
+
+[data-event="project-nova"] {
+  /* Yellow accents */
+  --theme-primary: #ffb81c;
+  --theme-primary-dark: #e09e10;
+  --theme-primary-glow: rgba(255, 184, 28, 0.25);
+  --theme-primary-subtle: rgba(255, 184, 28, 0.08);
+
+  /* Dark Blue backgrounds */
+  --theme-surface-0: #04091a;
+  --theme-surface-50: #08122c;
+  --theme-surface-100: #0e1c40;
+  --theme-surface-200: #172a5a;
+  --theme-surface-300: #223a75;
+  --theme-surface-400: #2e4b94;
+
+  /* White-toned text */
+  --theme-text-primary: #ffffff;
+  --theme-text-secondary: rgba(255, 255, 255, 0.85);
+  --theme-text-tertiary: rgba(255, 255, 255, 0.6);
+
+  /* Yellow-tinted borders */
+  --theme-border-subtle: rgba(255, 184, 28, 0.15);
+  --theme-border-light: rgba(255, 184, 28, 0.3);
+  --theme-border-accent: rgba(255, 184, 28, 0.5);
 }
 
 /* ─── Base Styles ──────────────────────────────────────────────────────────── */
@@ -140,10 +166,10 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(3, 126, 243, 0.15);
+    box-shadow: 0 0 20px var(--color-aiesec-blue-subtle);
   }
   50% {
-    box-shadow: 0 0 40px rgba(3, 126, 243, 0.3);
+    box-shadow: 0 0 40px var(--color-aiesec-blue-glow);
   }
 }
 
@@ -219,9 +245,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(3, 126, 243, 0.4) 25%,
-    rgba(3, 126, 243, 0.8) 50%,
-    rgba(3, 126, 243, 0.4) 75%,
+    var(--color-aiesec-blue-accent, var(--color-aiesec-blue)) 25%,
+    var(--color-aiesec-blue) 50%,
+    var(--color-aiesec-blue-accent, var(--color-aiesec-blue)) 75%,
     transparent 100%
   );
   background-size: 200% 100%;
@@ -255,7 +281,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .gradient-text-blue {
-  background: linear-gradient(135deg, #037EF3 0%, #60a5fa 50%, #037EF3 100%);
+  background: linear-gradient(135deg, var(--color-aiesec-blue) 0%, var(--color-aiesec-blue-dark) 50%, var(--color-aiesec-blue) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -270,7 +296,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .input-focus:focus {
   outline: none;
   border-color: var(--color-aiesec-blue);
-  box-shadow: 0 0 0 3px rgba(3, 126, 243, 0.15);
+  box-shadow: 0 0 0 3px var(--color-aiesec-blue-glow);
 }
 
 /* ─── Button Styles ────────────────────────────────────────────────────────── */
