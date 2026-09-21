@@ -2,13 +2,13 @@ import { initializeApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDhPO7KZvX8y8Whnyg9jGxT66_PDzunabU",
-  authDomain: "bdtool-aiesecsl.firebaseapp.com",
-  projectId: "bdtool-aiesecsl",
-  storageBucket: "bdtool-aiesecsl.firebasestorage.app",
-  messagingSenderId: "185199679929",
-  appId: "1:185199679929:web:0f9859a84f082e6433fe68",
-  measurementId: "G-MHLCWM6H88",
+  apiKey: "AIzaSyCtZMf0tAedJqLFmHgGXOFLF_1wTyr9NXk",
+  authDomain: "bdtool-usj.firebaseapp.com",
+  projectId: "bdtool-usj",
+  storageBucket: "bdtool-usj.firebasestorage.app",
+  messagingSenderId: "466080549044",
+  appId: "1:466080549044:web:5ecd37f9d1a140fa05efe1",
+  measurementId: "G-LSVD6247FH",
 };
 
 // Prevent re-initialization in dev mode (hot reload)

@@ -58,7 +58,7 @@ export default function NewPartnerPage() {
     const { valid, ocName, eventName, eventSlug } = validateAccessCode(accessCode);
     if (!valid) {
       setFormState("error");
-      setErrorMessage("Invalid access code. Please check with your MC.");
+      setErrorMessage("Invalid access code. Please check with your LC / OC.");
       setShakeCode(true);
       setTimeout(() => setShakeCode(false), 600);
       return;
@@ -344,7 +344,7 @@ export default function NewPartnerPage() {
 
         {/* Footer */}
         <p className="text-center text-xs text-text-tertiary mt-6 animate-stagger animate-fade-in delay-400">
-          AIESEC in Sri Lanka · BD Tool
+          AIESEC in USJ · BD Tool
         </p>
       </div>
     </div>

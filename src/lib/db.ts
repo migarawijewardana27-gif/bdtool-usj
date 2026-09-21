@@ -34,9 +34,9 @@ const ACCESS_CODES: Record<
   { ocName: string; eventName: string; eventSlug: string }
 > = {
   "2627": {
-    ocName: "MC",
-    eventName: "AIESEC in Sri Lanka",
-    eventSlug: "aiesec-in-sri-lanka",
+    ocName: "LC USJ",
+    eventName: "AIESEC in USJ",
+    eventSlug: "aiesec-in-usj",
   },
   "0000": {
     ocName: "NatCon 2026",

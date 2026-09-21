@@ -16,10 +16,10 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "AIESEC Partner Portal | BD Tool",
+  title: "AIESEC in USJ Partner Portal | BD Tool",
   description:
-    "Premium partner portal for AIESEC in Sri Lanka's corporate partnerships. Access your campaign deliverables and partnership assets.",
-  keywords: ["AIESEC", "Partner Portal", "Sri Lanka", "Business Development"],
+    "Premium partner portal for AIESEC in USJ's corporate partnerships. Access your campaign deliverables and partnership assets.",
+  keywords: ["AIESEC", "AIESEC in USJ", "USJ", "Partner Portal", "Sri Lanka", "Business Development"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

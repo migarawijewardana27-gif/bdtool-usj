@@ -22,11 +22,11 @@ export async function generateMetadata({
   const partner = await getPartnerBySlugServer(eventSlug, partnerSlug);
 
   if (!partner) {
-    return { title: "Partner Not Found | AIESEC" };
+    return { title: "Partner Not Found | AIESEC in USJ" };
   }
 
   return {
-    title: `${partner.companyName} — Partner Portal | AIESEC`,
+    title: `${partner.companyName} — Partner Portal | AIESEC in USJ`,
     description: `Welcome to the exclusive partner portal for ${partner.companyName}, ${partner.title} of ${partner.eventName}. Access your campaign deliverables.`,
   };
 }
@@ -215,7 +215,7 @@ function DefaultPartnerPage({
           <p className="text-xs text-text-tertiary">
             Powered by{" "}
             <span className="font-semibold text-text-secondary">
-              AIESEC in Sri Lanka
+              AIESEC in USJ
             </span>
           </p>
           <p className="text-xs text-text-tertiary">
@@ -369,7 +369,7 @@ function NatConPartnerPage({ partner }: { partner: any }) {
             The face behind the mask. NatCon 2026.
           </p>
           <p className="text-xs text-[#F5F1E6]/40 uppercase tracking-widest">
-            Powered by AIESEC in Sri Lanka
+            Powered by AIESEC in USJ
           </p>
         </div>
       </footer>
